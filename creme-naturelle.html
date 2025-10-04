@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFT SKIN - Crème Naturelle | Détails et Bienfaits</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background-color: #FFFACD;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #FFB6C1, #FFC0CB);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-style: italic;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        
+        .tagline {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: white;
+            opacity: 0.9;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+        
+        .back-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* Product Hero */
+        .product-hero {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #FFFACD, #FFF8DC);
+            text-align: center;
+        }
+        
+        .product-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            font-style: italic;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .product-hero .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #FF69B4;
+            margin-bottom: 30px;
+        }
+        
+        /* Product Details */
+        .product-details {
+            padding: 80px 0;
+            background-color: #FFFACD;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        .product-image-large {
+            background: linear-gradient(135deg, #FFB6C1, #FFC0CB, #FF69B4);
+            border-radius: 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 15px 35px rgba(255, 182, 193, 0.3);
+        }
+        
+        .product-info h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+            font-style: italic;
+        }
+        
+        .product-info p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .ingredients-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #FFB6C1;
+        }
+        
+        .ingredients-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c2c2c;
+        }
+        
+        .ingredients-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ingredients-box li {
+            padding: 8px 0;
+            font-size: 1.1rem;
+            color: #555;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .ingredients-box li:last-child {
+            border-bottom: none;
+        }
+        
+        .benefits-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #FFF8DC, #FFFACD);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c2c2c;
+        }
+        
+        .benefit-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .order-section {
+            padding: 80px 0;
+            background-color: #FFFACD;
+            text-align: center;
+        }
+        
+        .order-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFB6C1, #FFC0CB, #FF69B4);
+            color: white;
+            padding: 20px 50px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.3rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+        }
+        
+        .order-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(255, 182, 193, 0.6);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .product-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <a href="site_commande.html" class="logo">SOFT SKIN</a>
+                    <div class="tagline">by Yousra</div>
+                </div>
+                <a href="site_commande.html" class="back-button">← Retour au site</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Hero -->
+    <section class="product-hero">
+        <div class="container">
+            <h1>SOFT SKIN - Crème Naturelle</h1>
+            <div class="price">18€</div>
+            <p style="font-size: 1.3rem; color: #666; max-width: 600px; margin: 0 auto;">Notre crème artisanale à texture compacte et beurreuse, formulée avec des ingrédients 100% naturels pour une peau éclatante et nourrie.</p>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="product-image-large">
+                    🌿
+                </div>
+                <div class="product-info">
+                    <h2>Description du Produit</h2>
+                    <p>Notre crème naturelle SOFT SKIN est le fruit d'une passion pour la beauté artisanale. Créée avec amour par Yousra, cette crème à texture compacte et beurreuse offre une hydratation profonde et durable.</p>
+                    
+                    <p>Formulée avec des ingrédients soigneusement sélectionnés, cette crème convient à tous types de peau et s'absorbe rapidement sans laisser de film gras.</p>
+                    
+                    <div class="ingredients-box">
+                        <h3>Ingrédients Naturels</h3>
+                        <ul>
+                            <li><strong>Beurre de karité</strong> - Nourrit et protège la peau</li>
+                            <li><strong>Huile d'amande douce</strong> - Adoucit et apaise</li>
+                            <li><strong>Huile de coco</strong> - Hydrate en profondeur</li>
+                            <li><strong>Formule 100% naturelle</strong> - Sans produits chimiques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; text-align: center; margin-bottom: 20px; color: #2c2c2c; font-style: italic;">Bienfaits de la Crème</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 50px;">Découvrez tous les avantages de notre crème naturelle pour votre peau</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💧</div>
+                    <h3>Hydratation Intense</h3>
+                    <p>Le beurre de karité et l'huile de coco offrent une hydratation profonde et durable, parfaite pour les peaux sèches et déshydratées.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <h3>100% Naturel</h3>
+                    <p>Aucun produit chimique, conservateur ou parfum artificiel. Seuls des ingrédients naturels de qualité pour votre peau.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Texture Beurreuse</h3>
+                    <p>Une texture compacte et beurreuse qui s'applique facilement et pénètre rapidement sans laisser de résidu gras.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤲</div>
+                    <h3>Pour Tous Types de Peau</h3>
+                    <p>Formule douce et hypoallergénique, adaptée aux peaux sensibles, sèches, mixtes et même aux peaux à tendance grasse.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌱</div>
+                    <h3>Artisanal</h3>
+                    <p>Fabriquée à la main avec passion et expertise, chaque pot est unique et créé avec soin pour vous offrir le meilleur.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💝</div>
+                    <h3>Anti-Âge Naturel</h3>
+                    <p>Les antioxydants naturels du beurre de karité aident à lutter contre les signes de l'âge et à préserver la jeunesse de votre peau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section">
+        <div class="container">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 30px; color: #2c2c2c; font-style: italic;">Prêt à Essayer ?</h2>
+            <p style="font-size: 1.2rem; color: #666; margin-bottom: 40px;">Commandez votre crème naturelle SOFT SKIN dès maintenant</p>
+            <a href="site_commande.html#commande" class="order-button">Commander Maintenant - 18€</a>
+        </div>
+    </section>
+</body>
+</html>
