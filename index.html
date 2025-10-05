@@ -30,6 +30,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -917,7 +920,7 @@
     <section id="commande" class="order-section">
         <div class="container">
             <h2 class="section-title">Passer Commande</h2>
-            <form class="order-form" action="#" method="POST">
+            <form id="orderForm" class="order-form" onsubmit="sendOrderEmail(event)">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="prenom">Prénom *</label>
@@ -1084,12 +1087,17 @@
             });
         });
 
-        // Form submission handling
-        document.querySelector('.order-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Vous devrez remplacer par votre clé publique EmailJS
+        })();
+
+        // Function to send order email
+        function sendOrderEmail(event) {
+            event.preventDefault();
             
             // Collect form data
-            const formData = new FormData(this);
+            const formData = new FormData(event.target);
             const data = Object.fromEntries(formData);
             
             // Simple validation
@@ -1098,12 +1106,44 @@
                 return;
             }
             
-            // Simulate order processing
-            alert('Merci pour votre commande ! Nous vous contacterons sous peu pour confirmer les détails et organiser la livraison.');
+            // Calculate total price
+            const prices = {
+                'creme-naturelle': 15,
+                'format-familial': 28,
+                'pack-decouverte': 10,
+                'gommage-anti-points': 18,
+                'scrub-levres': 8,
+                'baume-demaquillant': 12,
+                'toner': 9,
+                'box-surprise': 32
+            };
             
-            // Reset form
-            this.reset();
-        });
+            const total = prices[data.produit] * parseInt(data.quantite);
+            
+            // Prepare email template parameters
+            const templateParams = {
+                from_name: data.prenom + ' ' + data.nom,
+                from_email: data.email,
+                phone: data.telephone,
+                address: data.adresse,
+                product: data.produit,
+                quantity: data.quantite,
+                total_price: total + '€',
+                message: data.message || 'Aucun message',
+                to_email: 'contact@softskin-yousra.com' // Votre email
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('Email envoyé avec succès!', response.status, response.text);
+                    alert('✅ Commande envoyée avec succès ! Vous recevrez une confirmation par email sous peu.');
+                    event.target.reset();
+                }, function(error) {
+                    console.log('Erreur lors de l\'envoi:', error);
+                    alert('❌ Erreur lors de l\'envoi de la commande. Veuillez réessayer ou nous contacter directement.');
+                });
+        }
 
         // Product modal functionality
         const productData = {
