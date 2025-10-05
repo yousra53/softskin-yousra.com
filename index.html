@@ -823,6 +823,21 @@
                     <div class="product-price">7€</div>
                     <a href="baume-demaquillant.html" style="display: inline-block; background: linear-gradient(135deg, #FFB6C1, #FFC0CB); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">Voir les détails</a>
                 </div>
+                
+                <div class="product-card">
+                    <div class="product-image" onclick="openProductModal('toner')" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><defs><radialGradient id=\"toner\" cx=\"50%\" cy=\"30%\" r=\"70%\"><stop offset=\"0%\" style=\"stop-color:%23E6F3FF;stop-opacity:1\" /><stop offset=\"100%\" style=\"stop-color:%23B3D9FF;stop-opacity:1\" /></radialGradient></defs><rect x=\"70\" y=\"30\" width=\"60\" height=\"140\" rx=\"8\" fill=\"url(%23toner)\" stroke=\"%2387CEEB\" stroke-width=\"3\"/><rect x=\"75\" y=\"35\" width=\"50\" height=\"130\" rx=\"5\" fill=\"%23E6F3FF\" opacity=\"0.9\"/><rect x=\"80\" y=\"40\" width=\"40\" height=\"120\" rx=\"3\" fill=\"%23B3D9FF\" opacity=\"0.7\"/><circle cx=\"100\" cy=\"50\" r=\"3\" fill=\"%234B0082\" opacity=\"0.8\"/><text x=\"100\" y=\"190\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"14\" fill=\"%234B0082\">TONER</text></svg>');">💧</div>
+                    <h3 class="product-title">SOFT SKIN - Toner Hydratant</h3>
+                    <p class="product-description">Notre toner hydratant naturel en spray (pchit pchit) pour rafraîchir et hydrater votre peau tout au long de la journée. Parfait pour un éclat instantané et une hydratation légère.</p>
+                    <div class="ingredients">
+                        <strong>Ingrédients :</strong><br>
+                        • Eau de rose (apaisante)<br>
+                        • Aloe vera (hydratant)<br>
+                        • Huile d'amande douce (adoucissante)<br>
+                        • Formule 100% naturelle
+                    </div>
+                    <div class="product-price">9€</div>
+                    <a href="toner.html" style="display: inline-block; background: linear-gradient(135deg, #FFB6C1, #FFC0CB); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">Voir les détails</a>
+                </div>
             </div>
         </div>
     </section>
@@ -868,6 +883,7 @@
                         <option value="gommage-anti-points">SOFT SKIN - Gommage Anti-Points Noirs - 18€</option>
                         <option value="scrub-levres">SOFT SKIN - Scrub pour Lèvres - 8€</option>
                         <option value="baume-demaquillant">SOFT SKIN - Baume Démaquillant - 7€</option>
+                        <option value="toner">SOFT SKIN - Toner Hydratant - 9€</option>
                     </select>
                 </div>
                 
@@ -929,6 +945,7 @@
                     <a href="#produits">SOFT SKIN - Gommage Anti-Points Noirs</a>
                     <a href="#produits">SOFT SKIN - Scrub pour Lèvres</a>
                     <a href="#produits">SOFT SKIN - Baume Démaquillant</a>
+                    <a href="#produits">SOFT SKIN - Toner Hydratant</a>
                 </div>
                 
                 <div class="footer-section">
@@ -1087,6 +1104,19 @@
                     'Texture onctueuse et agréable',
                     'Pour tous types de peau',
                     'Nourrissant et protecteur'
+                ]
+            },
+            'toner': {
+                title: 'SOFT SKIN - Toner Hydratant',
+                image1: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><radialGradient id="toner1" cx="50%" cy="30%" r="70%"><stop offset="0%" style="stop-color:%23E6F3FF;stop-opacity:1" /><stop offset="100%" style="stop-color:%23B3D9FF;stop-opacity:1" /></radialGradient></defs><rect x="140" y="60" width="120" height="280" rx="16" fill="url(%23toner1)" stroke="%2387CEEB" stroke-width="6"/><rect x="150" y="70" width="100" height="260" rx="10" fill="%23E6F3FF" opacity="0.9"/><rect x="160" y="80" width="80" height="240" rx="6" fill="%23B3D9FF" opacity="0.7"/><circle cx="200" cy="100" r="6" fill="%234B0082" opacity="0.8"/><text x="200" y="380" text-anchor="middle" font-family="Arial" font-size="28" fill="%234B0082">TONER</text></svg>',
+                image2: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><radialGradient id="toner2" cx="50%" cy="30%" r="70%"><stop offset="0%" style="stop-color:%23F0FFF0;stop-opacity:1" /><stop offset="100%" style="stop-color:%2398FB98;stop-opacity:1" /></radialGradient></defs><rect x="140" y="60" width="120" height="280" rx="16" fill="url(%23toner2)" stroke="%2390EE90" stroke-width="6"/><rect x="150" y="70" width="100" height="260" rx="10" fill="%23F0FFF0" opacity="0.9"/><rect x="160" y="80" width="80" height="240" rx="6" fill="%2398FB98" opacity="0.7"/><circle cx="200" cy="100" r="6" fill="%23006400" opacity="0.8"/><text x="200" y="380" text-anchor="middle" font-family="Arial" font-size="24" fill="%23006400">SPRAY</text></svg>',
+                benefits: [
+                    'Hydratation instantanée et rafraîchissante',
+                    'Parfait pour le matin et tout au long de la journée',
+                    '100% naturel et doux',
+                    'Format spray pratique (pchit pchit)',
+                    'Pour tous types de peau',
+                    'Éclat immédiat et hydratation légère'
                 ]
             }
         };
