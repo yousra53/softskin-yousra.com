@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradient pour le fond -->
+    <radialGradient id="backgroundGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFFACD;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gradient jaune et rose pour le texte -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFB6C1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient pour le sous-texte -->
+    <linearGradient id="subTextGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF69B4;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Ombre portée -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Fond circulaire jaune et rose -->
+  <circle cx="100" cy="100" r="95" fill="url(#backgroundGradient)" stroke="#FFD700" stroke-width="4"/>
+  
+  <!-- Texte principal SOFT SKIN -->
+  <text x="100" y="80" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="28" font-weight="700" fill="url(#textGradient)" filter="url(#shadow)">
+    SOFT SKIN
+  </text>
+  
+  <!-- Sous-texte by Yousra -->
+  <text x="100" y="140" text-anchor="middle" font-family="Crimson Text, serif" font-size="16" font-style="italic" font-weight="600" fill="url(#subTextGradient)" filter="url(#shadow)">
+    by Yousra
+  </text>
+  
+  <!-- Étoiles décoratives -->
+  <g opacity="0.8">
+    <text x="50" y="50" font-size="20" fill="#FFD700">✨</text>
+    <text x="150" y="50" font-size="20" fill="#FFB6C1">✨</text>
+    <text x="50" y="170" font-size="20" fill="#FFB6C1">✨</text>
+    <text x="150" y="170" font-size="20" fill="#FFD700">✨</text>
+    <text x="100" y="30" font-size="16" fill="#FFD700">✨</text>
+    <text x="100" y="190" font-size="16" fill="#FFB6C1">✨</text>
+  </g>
+</svg>
