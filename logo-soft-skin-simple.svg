@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <defs>
+    <!-- Gradient pour le texte -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0522D;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient pour le sous-texte -->
+    <linearGradient id="subTextGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D2691E;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Ombre portée -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Icône de crème à gauche -->
+  <g transform="translate(30, 50)">
+    <!-- Pot de crème simplifié -->
+    <circle cx="0" cy="0" r="20" fill="#FFF8DC" stroke="#D2B48C" stroke-width="2"/>
+    <circle cx="0" cy="0" r="15" fill="#FFFACD" opacity="0.9"/>
+    <circle cx="0" cy="0" r="10" fill="#F0E68C" opacity="0.7"/>
+    
+    <!-- Petite étoile -->
+    <text x="0" y="5" text-anchor="middle" font-size="12" fill="#FFB6C1">✨</text>
+  </g>
+  
+  <!-- Texte principal SOFT SKIN -->
+  <text x="80" y="45" font-family="Cormorant Garamond, serif" font-size="32" font-weight="700" fill="url(#textGradient)" filter="url(#shadow)">
+    SOFT SKIN
+  </text>
+  
+  <!-- Sous-texte by Yousra -->
+  <text x="80" y="70" font-family="Crimson Text, serif" font-size="14" font-style="italic" font-weight="600" fill="url(#subTextGradient)" filter="url(#shadow)">
+    by Yousra
+  </text>
+</svg>

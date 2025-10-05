@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradient pour le fond -->
+    <radialGradient id="backgroundGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#FFE4E1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Gradient pour le texte -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0522D;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient pour le sous-texte -->
+    <linearGradient id="subTextGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D2691E;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Ombre portée -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Fond circulaire -->
+  <circle cx="100" cy="100" r="95" fill="url(#backgroundGradient)" stroke="#FF69B4" stroke-width="4"/>
+  
+  <!-- Icône de crème au centre -->
+  <g transform="translate(100, 100)">
+    <!-- Pot de crème -->
+    <ellipse cx="0" cy="10" rx="20" ry="6" fill="#FFF8DC" stroke="#D2B48C" stroke-width="2"/>
+    <rect x="-20" y="-20" width="40" height="30" rx="6" ry="6" fill="#FFFACD" stroke="#D2B48C" stroke-width="2"/>
+    <rect x="-15" y="-15" width="30" height="20" rx="4" ry="4" fill="#F0E68C" opacity="0.8"/>
+    
+    <!-- Couvercle -->
+    <ellipse cx="0" cy="-25" rx="22" ry="5" fill="#D2B48C" stroke="#8B4513" stroke-width="1"/>
+    <rect x="-22" y="-28" width="44" height="8" rx="3" ry="3" fill="#D2B48C"/>
+    
+    <!-- Petite étoile décorative -->
+    <text x="0" y="-40" text-anchor="middle" font-size="16" fill="#FFB6C1">✨</text>
+  </g>
+  
+  <!-- Texte principal SOFT SKIN -->
+  <text x="100" y="50" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="24" font-weight="700" fill="url(#textGradient)" filter="url(#shadow)">
+    SOFT SKIN
+  </text>
+  
+  <!-- Sous-texte by Yousra -->
+  <text x="100" y="170" text-anchor="middle" font-family="Crimson Text, serif" font-size="14" font-style="italic" font-weight="600" fill="url(#subTextGradient)" filter="url(#shadow)">
+    by Yousra
+  </text>
+  
+  <!-- Petites étoiles décoratives -->
+  <g opacity="0.6">
+    <text x="30" y="30" font-size="16" fill="#FFB6C1">✨</text>
+    <text x="170" y="30" font-size="16" fill="#FFB6C1">✨</text>
+    <text x="30" y="180" font-size="16" fill="#FFB6C1">✨</text>
+    <text x="170" y="180" font-size="16" fill="#FFB6C1">✨</text>
+  </g>
+</svg>
