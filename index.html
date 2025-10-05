@@ -30,8 +30,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Formspree pour les notifications -->
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -920,7 +920,7 @@
     <section id="commande" class="order-section">
         <div class="container">
             <h2 class="section-title">Passer Commande</h2>
-            <form id="orderForm" class="order-form" onsubmit="sendOrderEmail(event)">
+            <form id="orderForm" class="order-form" action="https://formspree.io/f/xpwnqkqr" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="prenom">Prénom *</label>
@@ -979,7 +979,14 @@
                     <textarea id="message" name="message" rows="4" placeholder="Dites-nous vos besoins spécifiques ou questions..."></textarea>
                 </div>
                 
-                <button type="submit" class="submit-btn">Envoyer la Commande</button>
+                <!-- Champs cachés pour le calcul du prix -->
+                <input type="hidden" id="prix_unitaire" name="prix_unitaire" value="">
+                <input type="hidden" id="prix_total" name="prix_total" value="">
+                <input type="hidden" name="_subject" value="Nouvelle commande SOFT SKIN">
+                <input type="hidden" name="_replyto" value="">
+                <input type="hidden" name="_next" value="https://yousra53.github.io/softskin-yousra.com/?success=true">
+                
+                <button type="submit" class="submit-btn" onclick="calculateTotal()">Envoyer la Commande</button>
             </form>
         </div>
     </section>
@@ -1087,62 +1094,39 @@
             });
         });
 
-        // Initialize EmailJS
-        (function() {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Vous devrez remplacer par votre clé publique EmailJS
-        })();
+        // Prix des produits
+        const prices = {
+            'creme-naturelle': 15,
+            'format-familial': 28,
+            'pack-decouverte': 10,
+            'gommage-anti-points': 18,
+            'scrub-levres': 8,
+            'baume-demaquillant': 12,
+            'toner': 9,
+            'box-surprise': 32
+        };
 
-        // Function to send order email
-        function sendOrderEmail(event) {
-            event.preventDefault();
+        // Function to calculate total price
+        function calculateTotal() {
+            const produit = document.getElementById('produit').value;
+            const quantite = document.getElementById('quantite').value;
+            const email = document.getElementById('email').value;
             
-            // Collect form data
-            const formData = new FormData(event.target);
-            const data = Object.fromEntries(formData);
-            
-            // Simple validation
-            if (!data.prenom || !data.nom || !data.email || !data.telephone || !data.adresse || !data.produit || !data.quantite) {
-                alert('Veuillez remplir tous les champs obligatoires.');
-                return;
+            if (produit && quantite) {
+                const prixUnitaire = prices[produit];
+                const prixTotal = prixUnitaire * parseInt(quantite);
+                
+                document.getElementById('prix_unitaire').value = prixUnitaire + '€';
+                document.getElementById('prix_total').value = prixTotal + '€';
+                document.querySelector('input[name="_replyto"]').value = email;
             }
-            
-            // Calculate total price
-            const prices = {
-                'creme-naturelle': 15,
-                'format-familial': 28,
-                'pack-decouverte': 10,
-                'gommage-anti-points': 18,
-                'scrub-levres': 8,
-                'baume-demaquillant': 12,
-                'toner': 9,
-                'box-surprise': 32
-            };
-            
-            const total = prices[data.produit] * parseInt(data.quantite);
-            
-            // Prepare email template parameters
-            const templateParams = {
-                from_name: data.prenom + ' ' + data.nom,
-                from_email: data.email,
-                phone: data.telephone,
-                address: data.adresse,
-                product: data.produit,
-                quantity: data.quantite,
-                total_price: total + '€',
-                message: data.message || 'Aucun message',
-                to_email: 'contact@softskin-yousra.com' // Votre email
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-                .then(function(response) {
-                    console.log('Email envoyé avec succès!', response.status, response.text);
-                    alert('✅ Commande envoyée avec succès ! Vous recevrez une confirmation par email sous peu.');
-                    event.target.reset();
-                }, function(error) {
-                    console.log('Erreur lors de l\'envoi:', error);
-                    alert('❌ Erreur lors de l\'envoi de la commande. Veuillez réessayer ou nous contacter directement.');
-                });
+        }
+
+        // Vérifier si la commande a été envoyée avec succès
+        if (window.location.search.includes('success=true')) {
+            alert('✅ Commande envoyée avec succès ! Nous vous contacterons sous peu pour confirmer les détails et organiser la livraison.');
+            // Nettoyer l'URL
+            window.history.replaceState({}, document.title, window.location.pathname);
         }
 
         // Product modal functionality
