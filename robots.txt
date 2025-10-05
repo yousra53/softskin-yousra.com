@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yousra53.github.io/softskin-yousra.com/sitemap.xml
+
+# Optimisation pour SOFT SKIN
+Crawl-delay: 1

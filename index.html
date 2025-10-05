@@ -6,8 +6,8 @@
     <title>SOFT SKIN by Yousra - Crèmes Naturelles Artisanales | Soft Skin</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="SOFT SKIN by Yousra - Crèmes naturelles artisanales, gommages, scrubs et baumes démaquillants. Produits 100% naturels pour une peau douce et éclatante. Commandez en ligne.">
-    <meta name="keywords" content="soft skin, crème naturelle, beurre de karité, huile d'amande douce, gommage anti-points noirs, scrub lèvres, baume démaquillant, cosmétiques naturels, Yousra, artisanat">
+    <meta name="description" content="SOFT SKIN by Yousra - Découvrez nos crèmes naturelles artisanales, gommages anti-points noirs, scrubs pour lèvres, baumes démaquillants et toner hydratant. Produits 100% naturels pour une peau douce et éclatante. Box surprise disponible. Commandez en ligne.">
+    <meta name="keywords" content="SOFT SKIN, soft skin, crème naturelle, beurre de karité, huile d'amande douce, gommage anti-points noirs, scrub lèvres, baume démaquillant, toner hydratant, box surprise, cosmétiques naturels, Yousra, artisanat, produits de beauté naturels, soins visage, crème artisanale">
     <meta name="author" content="Yousra - SOFT SKIN">
     <meta name="robots" content="index, follow">
     
@@ -15,7 +15,7 @@
     <meta property="og:title" content="SOFT SKIN by Yousra - Crèmes Naturelles Artisanales">
     <meta property="og:description" content="Découvrez nos crèmes naturelles artisanales, gommages et soins 100% naturels pour une peau douce et éclatante.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://softskin-yousra.com">
+    <meta property="og:url" content="https://yousra53.github.io/softskin-yousra.com/">
     <meta property="og:image" content="https://softskin-yousra.com/images/soft-skin-logo.jpg">
     
     <!-- Twitter Card Meta Tags -->
@@ -24,10 +24,60 @@
     <meta name="twitter:description" content="Crèmes naturelles artisanales pour une peau douce et éclatante">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://softskin-yousra.com">
+    <link rel="canonical" href="https://yousra53.github.io/softskin-yousra.com/">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SOFT SKIN by Yousra",
+        "description": "Crèmes naturelles artisanales, gommages, scrubs et baumes démaquillants 100% naturels",
+        "url": "https://yousra53.github.io/softskin-yousra.com/",
+        "logo": "https://yousra53.github.io/softskin-yousra.com/images/soft-skin-logo.jpg",
+        "founder": {
+            "@type": "Person",
+            "name": "Yousra"
+        },
+        "sameAs": [],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33-XX-XX-XX-XX",
+            "contactType": "customer service",
+            "email": "contact@softskin-yousra.com"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "FR"
+        },
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "SOFT SKIN - Crème Naturelle",
+                "description": "Crème naturelle artisanale avec beurre de karité, huile d'amande douce et huile de coco",
+                "price": "15",
+                "priceCurrency": "EUR"
+            },
+            {
+                "@type": "Offer",
+                "name": "SOFT SKIN - Format Familial",
+                "description": "Format familial de notre crème naturelle artisanale",
+                "price": "28",
+                "priceCurrency": "EUR"
+            },
+            {
+                "@type": "Offer",
+                "name": "SOFT SKIN - Box Surprise",
+                "description": "Box surprise contenant une sélection de nos meilleurs produits",
+                "price": "32",
+                "priceCurrency": "EUR"
+            }
+        ]
+    }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
         
@@ -838,6 +888,21 @@
                     <div class="product-price">9€</div>
                     <a href="toner.html" style="display: inline-block; background: linear-gradient(135deg, #FFB6C1, #FFC0CB); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">Voir les détails</a>
                 </div>
+                
+                <div class="product-card">
+                    <div class="product-image" onclick="openProductModal('box-surprise')" style="background-image: url('images/image soft skin/photo-1521453204431-f4d478004ce1.jpeg'); background-size: cover; background-position: center;"></div>
+                    <h3 class="product-title">SOFT SKIN - Box Surprise</h3>
+                    <p class="product-description">Notre box surprise contenant une sélection de nos meilleurs produits. Une surprise parfaite pour découvrir l'univers SOFT SKIN ou offrir à vos proches.</p>
+                    <div class="ingredients">
+                        <strong>Contenu :</strong><br>
+                        • Sélection de nos produits phares<br>
+                        • Format surprise (contenu varié)<br>
+                        • Emballage cadeau inclus<br>
+                        • Parfait pour découvrir ou offrir
+                    </div>
+                    <div class="product-price">32€</div>
+                    <a href="box-surprise.html" style="display: inline-block; background: linear-gradient(135deg, #FFB6C1, #FFC0CB); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: 600; margin-top: 15px; transition: all 0.3s ease;">Voir les détails</a>
+                </div>
             </div>
         </div>
     </section>
@@ -884,6 +949,7 @@
                         <option value="scrub-levres">SOFT SKIN - Scrub pour Lèvres - 8€</option>
                         <option value="baume-demaquillant">SOFT SKIN - Baume Démaquillant - 7€</option>
                         <option value="toner">SOFT SKIN - Toner Hydratant - 9€</option>
+                        <option value="box-surprise">SOFT SKIN - Box Surprise - 32€</option>
                     </select>
                 </div>
                 
@@ -946,6 +1012,7 @@
                     <a href="#produits">SOFT SKIN - Scrub pour Lèvres</a>
                     <a href="#produits">SOFT SKIN - Baume Démaquillant</a>
                     <a href="#produits">SOFT SKIN - Toner Hydratant</a>
+                    <a href="#produits">SOFT SKIN - Box Surprise</a>
                 </div>
                 
                 <div class="footer-section">
@@ -1117,6 +1184,19 @@
                     'Format spray pratique (pchit pchit)',
                     'Pour tous types de peau',
                     'Éclat immédiat et hydratation légère'
+                ]
+            },
+            'box-surprise': {
+                title: 'SOFT SKIN - Box Surprise',
+                image1: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><radialGradient id="box1" cx="50%" cy="30%" r="70%"><stop offset="0%" style="stop-color:%23FFE4E1;stop-opacity:1" /><stop offset="100%" style="stop-color:%23FFB6C1;stop-opacity:1" /></radialGradient></defs><rect x="100" y="80" width="200" height="240" rx="20" fill="url(%23box1)" stroke="%23FF69B4" stroke-width="6"/><rect x="120" y="100" width="160" height="200" rx="15" fill="%23FFE4E1" opacity="0.9"/><rect x="140" y="120" width="120" height="160" rx="10" fill="%23FFB6C1" opacity="0.7"/><text x="200" y="350" text-anchor="middle" font-family="Arial" font-size="28" fill="%238B4513">BOX SURPRISE</text></svg>',
+                image2: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><radialGradient id="box2" cx="50%" cy="30%" r="70%"><stop offset="0%" style="stop-color:%23F0FFF0;stop-opacity:1" /><stop offset="100%" style="stop-color:%2398FB98;stop-opacity:1" /></radialGradient></defs><rect x="100" y="80" width="200" height="240" rx="20" fill="url(%23box2)" stroke="%2390EE90" stroke-width="6"/><rect x="120" y="100" width="160" height="200" rx="15" fill="%23F0FFF0" opacity="0.9"/><rect x="140" y="120" width="120" height="160" rx="10" fill="%2398FB98" opacity="0.7"/><text x="200" y="350" text-anchor="middle" font-family="Arial" font-size="24" fill="%23006400">CADEAU</text></svg>',
+                benefits: [
+                    'Sélection surprise de nos meilleurs produits',
+                    'Parfait pour découvrir l\'univers SOFT SKIN',
+                    'Idéal comme cadeau pour vos proches',
+                    'Emballage cadeau inclus',
+                    'Contenu varié et personnalisé',
+                    'Valeur exceptionnelle'
                 ]
             }
         };
